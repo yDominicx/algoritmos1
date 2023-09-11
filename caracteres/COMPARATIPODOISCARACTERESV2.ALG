@@ -1,20 +1,38 @@
 Algoritmo "ComparaTipoDoisCaracteresV2"
 Var
    car1, car2 : caractere
+   controle1, controle2 : inteiro
 Inicio
       escreva("Insira dois caracteres")
       leia(car1, car2)
-      se ((car1 >= "A") e (car1 <= "Z")) e ((car2 >= "A") e (car2 <= "Z")) então
-         escreva("Ambos caracteres são maiúsculos")
-      senão
-           se ((car1 >= "a") e (car1 <= "z")) e ((car2 >= "a") e (car2 <= "z")) então
-              escreva("Ambos caracteres são minúsculos")
-           senão
-                se ((car1 >= "0") e (car1 <= "9")) e ((car2 >= "0") e (car2 <= "9")) então
-                   escreva("Ambos caracteres são números")
-                senão
-                     escreva("Os caracteres são de tipos diferentes")
-                fimse
+      se ((car1 >= "A") e (car1 <= "Z")) entao
+         controle1 <- 1
+      senÃ£o
+           se ((car1 >= "a") e (car1 <= "z")) entao
+              controle1 <- 2
+           senÃ£o
+               se ((car1 >= "0") e (car1 <= "9")) entao
+                  controle1 <- 3
+               senÃ£o
+                  controle1 <- 4
+               fimse
            fimse
       fimse
+      se ((car2 >= "A") e (car2 <= "Z")) entao
+         controle1 <- 1
+      senÃ£o
+           se ((car2 >= "a") e (car2 <= "z")) entao
+              controle1 <- 2
+           senÃ£o
+               se ((car2 >= "0") e (car2 <= "9")) entao
+                  controle1 <- 3
+               senÃ£o
+                  controle1 <- 4
+               fimse
+           fimse
+      fimse
+      se controle1 = controle2 entao
+         escreva("Os caracteres sÃ£o do mesmo tipo")
+      senao
+         escreva("Os caracteres sÃ£o de tipos diferentes")
 Fimalgoritmo
